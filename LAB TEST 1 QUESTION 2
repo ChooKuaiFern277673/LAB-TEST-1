@@ -1,0 +1,41 @@
+package labTest1;
+import java.util.Scanner;
+public class LabTest1Question2 {
+
+		public static void main(String[] args) {
+			
+			double salesVolume, commission, dailyWages;
+			int hours;
+			//declare the sales, commission, dailyWages & hours 	of worked
+			Scanner in = new Scanner (System.in);
+
+			System.out.print("Enter sales                : RM");
+			salesVolume  = in.nextDouble();
+			System.out.print("Enter hours worked : ");
+			hours = in.nextInt();
+			//enter the sales & hours of worked
+			
+			if (salesVolume >= 150 && salesVolume<= 300) {
+				commission = (salesVolume*0.05);
+			}else if (salesVolume > 300 && salesVolume <= 500) {
+				commission = (salesVolume*0.10);
+			}else
+				commission = (salesVolume*0.15);
+			
+			dailyWages = (hours*5) + commission;
+			//calculate the commission based on the sales volume 
+			
+			System.out.println();
+			System.out.println("Commission     : RM" + commission);
+			System.out.println("Daily Wages    : RM" + dailyWages);
+			// to display commission received & the daily wages 
+		}
+
+	}
+  
+  OUTPUT :
+  Enter sales                : RM500
+Enter hours worked : 5
+
+Commission     : RM50.0
+Daily Wages    : RM75.0

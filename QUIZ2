@@ -6,62 +6,37 @@ public class Quiz2Bonus {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		
-
-		Scanner in = new Scanner(System.in);
-
-		double a,b,c,d;
-		double year=0;
-		double year1=0;
-		double year2=0;
-		double year3=0;
-		double bonus;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("PLEASE ENTER YOUR SALARY");
+		int salary=sc.nextInt();
+		System.out.println("YOUR SALARY: " + salary);
 		
+		System.out.println("ENTER YOUR YEAR OF SERVICE");
+		int year = sc.nextInt();
+		System.out.println("YEAR OF SERVICE" + year);
 		
-		System.out.println("Salary is : RM ");
-		a=sc.nextDouble();
-		System.out.println("Service work: "+year);
-	        year=sc.nextDouble();
-		
-		if(year>5) {
-			bonus=1.05*a;
-			System.out.println("Your bonus is : RM "+bonus);
-			
-		}else {
-			System.out.println("You dont get any bonus. SORRY ! ");
-		}
-		
-		
-		System.out.println("Salary is : RM ");
-		b=sc.nextDouble();
-		System.out.println("Service work : "+year1);
-		year1=sc.nextDouble();
-		System.out.println("Salary is : RM ");
-		c=sc.nextDouble();
-		System.out.println("Service work : "+year2);
-		year2=sc.nextDouble();
-		System.out.println("Salary is : RM ");
-		d=sc.nextDouble();
-		System.out.println("Service work : "+year3);
-		year3=sc.nextDouble();
-		
-		
-		if(b>c&&b>d) {
-			System.out.println(b);
-		}
-		else if(c>b&&c>d){
-			System.out.println(c);
-		}else if(d>b&&d>c){
-			System.out.println(d);
-		}
-		if(year1>year2&&year1>year3) {
-			System.out.println(year1);
-		}
-		else if(year2>year1&&year2>year3){
-			System.out.println(year2);
-		}else if(year3>year1&&year3>year2){
-			System.out.println(year3);
-		}
-		}
+		if (year>5) {
+			double bonus = salary*0.05;
+			System.out.println("Bonus is : " + bonus);
+			}
+			else
+				System.out.println("no bonus");
+			double highestsalary = salary *1.05;
+			double lowestsalary = salary *1.00;
+			System.out.println("Highest salary : " + highestsalary);
+			System.out.println("Lowest salary : " + lowestsalary);
 	}
+
+}
+
+OUTPUT;
+PLEASE ENTER YOUR SALARY
+3000
+YOUR SALARY: 3000
+ENTER YOUR YEAR OF SERVICE
+6
+YEAR OF SERVICE6
+Bonuss : 150.0
+Highest salary : 3150.0
+Lowest salary : 3000.0

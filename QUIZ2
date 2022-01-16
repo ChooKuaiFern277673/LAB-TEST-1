@@ -37,13 +37,48 @@ public class Quiz2Bonus {
 		{
 
 		System.out.println("Your bonus access is denied");
-		int highest=Integer.MIN_VALUE;
-		int lowest=Integer.MAX_VALUE;
-
-
-		System.out.println("\nEnter your salary from January until December: ");
-		
-		}
-   }
 	
-}
+		
+		int [] monthlySalary = new int [3]; 
+		
+		System.out.println("Enter your monthly salary for latest 3 month:");
+		for(int i = 0; i < monthlySalary.length; i++)
+			monthlySalary[i] = sc.nextInt();
+		
+		int max = monthlySalary[0];
+	      int min = monthlySalary[0];
+	      
+	      for (int i = 1; i < monthlySalary.length; i++)
+	      {
+	         if(monthlySalary[i] > max)
+	             max = monthlySalary[i];
+	         if(monthlySalary[i] < min)
+	             min = monthlySalary[i];
+	      }
+
+	      System.out.println("Highest salary: " + max); 
+	      System.out.println("Lowest salary: " + min);
+	      
+	      int [] age = new int [3];
+	      
+	      System.out.println("");
+	      System.out.println("Enter your age:");
+	      for(int i = 0; i < age.length;i++) 
+	    	  age[i] = sc.nextInt();
+	      
+	      int oldest = age[0];
+	      int youngest = age[0];
+	      
+	      for (int i = 1; i < age.length; i++)
+	      {
+	         if(age[i] > oldest)
+	             max = age[i];
+	         if(age[i] < youngest)
+	             min = age[i];
+	      }
+
+	      System.out.println("Oldest: " + oldest); 
+	      System.out.println("Youngest: " + youngest);
+	      }
+	}
+

@@ -1,0 +1,58 @@
+package labTest2;
+
+import java.util.Scanner;
+
+public class CheckOddEven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int e = 0;
+        int f =0;
+        int g;
+        int OddNumbers = 0;
+        int EvenNumbers = 0;
+        Scanner q = new Scanner(System.in);
+
+        System.out.print("Enter the number: ");
+        g = q.nextInt();
+
+        while(f <= g)
+        {
+            f++;
+            System.out.print("Please enter a number : ");
+            e = q.nextInt();
+  
+            if (e % 2 == 0)
+            {     
+            	System.out.println(e + " is an even number!");
+                  EvenNumbers = EvenNumbers + e;
+            }
+            else
+            {      
+            	System.out.println(e + " is an odd number!");
+            	  OddNumbers = OddNumbers + e;  
+            }
+
+            if(f == g)
+            {
+                break;
+            }
+        }
+
+        if (f == g)
+        {         
+            System.out.println("\n"		+ "Bye!");
+        }
+
+        if (e == 0)
+        {
+            System.out.print("Please enter the correct number!");
+        }
+	}
+}
+
+Output;
+Enter the number: 0
+Please enter a number : 6
+6 is an even number!

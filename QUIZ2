@@ -11,74 +11,57 @@ public class Quiz2Bonus {
 
 		Scanner in = new Scanner(System.in);
 
-		double a; 
-		double b;
-		double c;
-		double highestsalary;
-		double lowestsalary;
+		double a,b,c,d;
+		double year=0;
+		double year1=0;
+		double year2=0;
+		double year3=0;
+		double bonus;
 		
-		System.out.println("Input the monthly salary");
-
-		a=in.nextInt();
-
-		System.out.println("Give your serving years");
-
-		b=in.nextInt();
-
-		c=(5/100)*a;
-
-		if (b>5||b==5) {
-
-		System.out.println("Here's your bonus:]" +c);
+		
+		System.out.println("Salary is : RM ");
+		a=sc.nextDouble();
+		System.out.println("Service work: "+year);
+	        year=sc.nextDouble();
+		
+		if(year>5) {
+			bonus=1.05*a;
+			System.out.println("Your bonus is : RM "+bonus);
+			
+		}else {
+			System.out.println("You dont get any bonus. SORRY ! ");
 		}
-
-		else
-
-		{
-
-		System.out.println("Your bonus access is denied");
-	
 		
-		int [] monthlySalary = new int [3]; 
 		
-		System.out.println("Enter your monthly salary for latest 3 month:");
-		for(int i = 0; i < monthlySalary.length; i++)
-			monthlySalary[i] = sc.nextInt();
+		System.out.println("Salary is : RM ");
+		b=sc.nextDouble();
+		System.out.println("Service work : "+year1);
+		year1=sc.nextDouble();
+		System.out.println("Salary is : RM ");
+		c=sc.nextDouble();
+		System.out.println("Service work : "+year2);
+		year2=sc.nextDouble();
+		System.out.println("Salary is : RM ");
+		d=sc.nextDouble();
+		System.out.println("Service work : "+year3);
+		year3=sc.nextDouble();
 		
-		int max = monthlySalary[0];
-	      int min = monthlySalary[0];
-	      
-	      for (int i = 1; i < monthlySalary.length; i++)
-	      {
-	         if(monthlySalary[i] > max)
-	             max = monthlySalary[i];
-	         if(monthlySalary[i] < min)
-	             min = monthlySalary[i];
-	      }
-
-	      System.out.println("Highest salary: " + max); 
-	      System.out.println("Lowest salary: " + min);
-	      
-	      int [] age = new int [3];
-	      
-	      System.out.println("");
-	      System.out.println("Enter your age:");
-	      for(int i = 0; i < age.length;i++) 
-	    	  age[i] = sc.nextInt();
-	      
-	      int oldest = age[0];
-	      int youngest = age[0];
-	      
-	      for (int i = 1; i < age.length; i++)
-	      {
-	         if(age[i] > oldest)
-	             max = age[i];
-	         if(age[i] < youngest)
-	             min = age[i];
-	      }
-
-	      System.out.println("Oldest: " + oldest); 
-	      System.out.println("Youngest: " + youngest);
-	      }
+		
+		if(b>c&&b>d) {
+			System.out.println(b);
+		}
+		else if(c>b&&c>d){
+			System.out.println(c);
+		}else if(d>b&&d>c){
+			System.out.println(d);
+		}
+		if(year1>year2&&year1>year3) {
+			System.out.println(year1);
+		}
+		else if(year2>year1&&year2>year3){
+			System.out.println(year2);
+		}else if(year3>year1&&year3>year2){
+			System.out.println(year3);
+		}
+		}
 	}
-

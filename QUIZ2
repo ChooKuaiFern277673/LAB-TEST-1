@@ -14,6 +14,9 @@ public class Quiz2Bonus {
 		double a; 
 		double b;
 		double c;
+		double highestsalary;
+		double lowestsalary;
+		
 		System.out.println("Input the monthly salary");
 
 		a=in.nextInt();
@@ -34,7 +37,12 @@ public class Quiz2Bonus {
 		{
 
 		System.out.println("Your bonus access is denied");
+		int highest=Integer.MIN_VALUE;
+		int lowest=Integer.MAX_VALUE;
 
+
+		System.out.println("\nEnter your salary from January until December: ");
+		
 		}
    }
 	
